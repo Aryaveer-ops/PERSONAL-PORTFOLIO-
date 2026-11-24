@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgFare" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e1322"/>
+      <stop offset="100%" stop-color="#070913"/>
+    </linearGradient>
+    <linearGradient id="fareCurve" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="360" rx="16" fill="url(#bgFare)"/>
+
+  <!-- Top bar -->
+  <rect x="25" y="20" width="550" height="45" rx="8" fill="#141a2e" stroke="#222b46" stroke-width="1"/>
+  <circle cx="45" cy="42" r="5" fill="#06B6D4"/>
+  <text x="60" y="46" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-weight="700" font-size="13">Fare AI Predictor • Regression Model Engine</text>
+  <rect x="440" y="30" width="120" height="25" rx="6" fill="#8B5CF6" opacity="0.15"/>
+  <text x="500" y="47" fill="#a78bfa" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">R² Score: 0.94</text>
+
+  <!-- Left: Prediction Parameter Inputs -->
+  <g transform="translate(25, 78)">
+    <rect width="230" height="258" rx="8" fill="#111728" stroke="#1f2942" stroke-width="1"/>
+    <text x="16" y="26" fill="#a1a1aa" font-family="sans-serif" font-size="11" font-weight="bold">INPUT PARAMETERS</text>
+    
+    <!-- Distance input -->
+    <text x="16" y="52" fill="#94a3b8" font-family="sans-serif" font-size="10">Trip Distance</text>
+    <rect x="16" y="58" width="198" height="26" rx="4" fill="#0b0f1c" stroke="#253152" stroke-width="1"/>
+    <text x="26" y="75" fill="#ffffff" font-family="monospace" font-size="11">18.4 km</text>
+
+    <!-- Surge & Time of Day -->
+    <text x="16" y="104" fill="#94a3b8" font-family="sans-serif" font-size="10">Peak Hours / Surge Factor</text>
+    <rect x="16" y="110" width="198" height="26" rx="4" fill="#0b0f1c" stroke="#253152" stroke-width="1"/>
+    <text x="26" y="127" fill="#ffffff" font-family="monospace" font-size="11">1.4x (Evening Rush)</text>
+
+    <!-- Weather condition -->
+    <text x="16" y="156" fill="#94a3b8" font-family="sans-serif" font-size="10">Weather Condition</text>
+    <rect x="16" y="162" width="198" height="26" rx="4" fill="#0b0f1c" stroke="#253152" stroke-width="1"/>
+    <text x="26" y="179" fill="#ffffff" font-family="monospace" font-size="11">Clear / Moderate Traffic</text>
+
+    <!-- Computed Fare Box -->
+    <rect x="16" y="200" width="198" height="46" rx="6" fill="#8B5CF6" opacity="0.2" stroke="#8B5CF6" stroke-width="1.2"/>
+    <text x="26" y="218" fill="#c4b5fd" font-family="sans-serif" font-size="9" font-weight="bold">ESTIMATED FARE</text>
+    <text x="26" y="238" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="17" font-weight="bold">₹348.50</text>
+    <text x="180" y="236" fill="#10b981" font-family="sans-serif" font-size="10" text-anchor="end">± ₹12</text>
+  </g>
+
+  <!-- Right: Regression Curve & Feature Importance -->
+  <g transform="translate(270, 78)">
+    <rect width="305" height="258" rx="8" fill="#111728" stroke="#1f2942" stroke-width="1"/>
+    <text x="18" y="26" fill="#a1a1aa" font-family="sans-serif" font-size="11" font-weight="bold">PREDICTIVE TREND &amp; SCATTER REGRESSION</text>
+
+    <!-- Chart Grid -->
+    <g transform="translate(18, 45)" stroke="#1e2840" stroke-width="1">
+      <line x1="20" y1="20" x2="270" y2="20" stroke-dasharray="3 3"/>
+      <line x1="20" y1="60" x2="270" y2="60" stroke-dasharray="3 3"/>
+      <line x1="20" y1="100" x2="270" y2="100" stroke-dasharray="3 3"/>
+      <line x1="20" y1="140" x2="270" y2="140"/>
+      <line x1="20" y1="10" x2="20" y2="140"/>
+    </g>
+
+    <!-- Data scatter points -->
+    <g fill="#06B6D4" opacity="0.6">
+      <circle cx="50" cy="170" r="3"/>
+      <circle cx="70" cy="160" r="3.5"/>
+      <circle cx="95" cy="150" r="3"/>
+      <circle cx="120" cy="140" r="4"/>
+      <circle cx="150" cy="125" r="3"/>
+      <circle cx="180" cy="115" r="3.5"/>
+      <circle cx="210" cy="98" r="4"/>
+      <circle cx="240" cy="85" r="3"/>
+      <circle cx="270" cy="72" r="3.5"/>
+    </g>
+
+    <!-- Polynomial/Linear regression curve -->
+    <path d="M40,175 Q150,135 285,65" fill="none" stroke="url(#fareCurve)" stroke-width="3.5" stroke-linecap="round"/>
+
+    <!-- Target highlight pulse -->
+    <circle cx="180" cy="118" r="8" fill="#8B5CF6" opacity="0.4"/>
+    <circle cx="180" cy="118" r="4" fill="#ffffff"/>
+
+    <!-- Bottom Metric chips -->
+    <g transform="translate(18, 205)">
+      <rect x="0" y="0" width="85" height="40" rx="4" fill="#0d111d"/>
+      <text x="42" y="16" fill="#94a3b8" font-family="sans-serif" font-size="8" text-anchor="middle">MAE</text>
+      <text x="42" y="32" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">₹8.42</text>
+
+      <rect x="92" y="0" width="85" height="40" rx="4" fill="#0d111d"/>
+      <text x="134" y="16" fill="#94a3b8" font-family="sans-serif" font-size="8" text-anchor="middle">RMSE</text>
+      <text x="134" y="32" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">12.15</text>
+
+      <rect x="184" y="0" width="85" height="40" rx="4" fill="#0d111d"/>
+      <text x="226" y="16" fill="#94a3b8" font-family="sans-serif" font-size="8" text-anchor="middle">DATASET</text>
+      <text x="226" y="32" fill="#06B6D4" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">50,000+</text>
+    </g>
+  </g>
+</svg>

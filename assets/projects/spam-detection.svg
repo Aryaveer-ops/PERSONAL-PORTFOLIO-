@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgSpam" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111628"/>
+      <stop offset="100%" stop-color="#080b15"/>
+    </linearGradient>
+    <linearGradient id="spamAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <linearGradient id="hamAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="360" rx="16" fill="url(#bgSpam)"/>
+
+  <!-- Top Model Status Bar -->
+  <rect x="25" y="20" width="550" height="46" rx="10" fill="#182038" stroke="#253154" stroke-width="1"/>
+  <circle cx="48" cy="43" r="6" fill="#10b981"/>
+  <text x="64" y="47" fill="#ffffff" font-family="'Courier New', monospace" font-size="13" font-weight="bold">Naive Bayes / TF-IDF Classifier</text>
+  <rect x="420" y="30" width="140" height="26" rx="6" fill="#10b981" opacity="0.15"/>
+  <text x="490" y="47" fill="#10b981" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Accuracy: 98.6%</text>
+
+  <!-- Left: Input Mail Analyzer Panel -->
+  <g transform="translate(25, 80)">
+    <rect width="280" height="255" rx="10" fill="#141a2e" stroke="#222d4c" stroke-width="1"/>
+    <text x="18" y="28" fill="#a1a1aa" font-family="sans-serif" font-size="12" font-weight="600">INPUT MESSAGE INSPECTOR</text>
+    
+    <!-- Email Content Mockup -->
+    <rect x="18" y="42" width="244" height="120" rx="6" fill="#0d111d" stroke="#222b44" stroke-width="1"/>
+    <text x="28" y="62" fill="#ef4444" font-family="monospace" font-size="10">Subject: URGENT! Claim $5000 prize...</text>
+    <text x="28" y="80" fill="#a1a1aa" font-family="monospace" font-size="9">Congratulations! You have been</text>
+    <text x="28" y="94" fill="#a1a1aa" font-family="monospace" font-size="9">selected as our winner. Click below</text>
+    <text x="28" y="108" fill="#ef4444" font-family="monospace" font-size="9">link immediately to verify!</text>
+    
+    <!-- Token highlights -->
+    <rect x="18" y="174" width="244" height="40" rx="6" fill="#1a223a"/>
+    <text x="28" y="190" fill="#8B5CF6" font-family="sans-serif" font-size="10" font-weight="bold">High-Risk Tokens Detected:</text>
+    <text x="28" y="205" fill="#f87171" font-family="monospace" font-size="9">["urgent", "claim", "$5000", "winner"]</text>
+
+    <!-- Predict Button -->
+    <rect x="18" y="222" width="244" height="24" rx="6" fill="#8B5CF6"/>
+    <text x="140" y="238" fill="#ffffff" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">RE-EVALUATE TEXT</text>
+  </g>
+
+  <!-- Right: Prediction Result & Probability Curves -->
+  <g transform="translate(320, 80)">
+    <rect width="255" height="255" rx="10" fill="#141a2e" stroke="#222d4c" stroke-width="1"/>
+    
+    <!-- Result Alert Badge -->
+    <rect x="18" y="18" width="219" height="50" rx="8" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="1"/>
+    <circle cx="42" cy="43" r="14" fill="#ef4444"/>
+    <!-- Warning exclamation icon -->
+    <text x="42" y="49" fill="#ffffff" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle">!</text>
+    <text x="68" y="38" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="bold">SPAM DETECTED</text>
+    <text x="68" y="54" fill="#f87171" font-family="sans-serif" font-size="10">Confidence Score: 99.2%</text>
+
+    <!-- Probability Bar Charts -->
+    <text x="18" y="92" fill="#a1a1aa" font-family="sans-serif" font-size="11" font-weight="600">CONFIDENCE DISTRIBUTION</text>
+    
+    <text x="18" y="112" fill="#ef4444" font-family="sans-serif" font-size="10">Spam</text>
+    <text x="215" y="112" fill="#ef4444" font-family="sans-serif" font-size="10" text-anchor="end">99.2%</text>
+    <rect x="18" y="118" width="219" height="8" rx="4" fill="#202a46"/>
+    <rect x="18" y="118" width="217" height="8" rx="4" fill="url(#spamAccent)"/>
+
+    <text x="18" y="146" fill="#10b981" font-family="sans-serif" font-size="10">Legitimate (Ham)</text>
+    <text x="215" y="146" fill="#10b981" font-family="sans-serif" font-size="10" text-anchor="end">0.8%</text>
+    <rect x="18" y="152" width="219" height="8" rx="4" fill="#202a46"/>
+    <rect x="18" y="152" width="6" height="8" rx="3" fill="url(#hamAccent)"/>
+
+    <!-- Mini Confusion Matrix Preview -->
+    <rect x="18" y="174" width="219" height="68" rx="6" fill="#0d111d" stroke="#222b44" stroke-width="1"/>
+    <text x="30" y="192" fill="#8B5CF6" font-family="monospace" font-size="9" font-weight="bold">CONFUSION MATRIX</text>
+    <text x="30" y="210" fill="#a1a1aa" font-family="monospace" font-size="9">TP: 1,420</text>
+    <text x="130" y="210" fill="#a1a1aa" font-family="monospace" font-size="9">FP: 12</text>
+    <text x="30" y="228" fill="#a1a1aa" font-family="monospace" font-size="9">FN: 8</text>
+    <text x="130" y="228" fill="#a1a1aa" font-family="monospace" font-size="9">TN: 2,890</text>
+  </g>
+</svg>

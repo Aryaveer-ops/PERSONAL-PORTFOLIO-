@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgPort" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080B14"/>
+      <stop offset="50%" stop-color="#101525"/>
+      <stop offset="100%" stop-color="#080B14"/>
+    </linearGradient>
+    <linearGradient id="gradPurpleCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <filter id="previewGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="360" rx="16" fill="url(#bgPort)"/>
+  
+  <!-- Subtle Grid Lines -->
+  <g stroke="rgba(139, 92, 246, 0.08)" stroke-width="1">
+    <line x1="0" y1="60" x2="600" y2="60"/>
+    <line x1="0" y1="120" x2="600" y2="120"/>
+    <line x1="0" y1="180" x2="600" y2="180"/>
+    <line x1="0" y1="240" x2="600" y2="240"/>
+    <line x1="0" y1="300" x2="600" y2="300"/>
+    <line x1="100" y1="0" x2="100" y2="360"/>
+    <line x1="200" y1="0" x2="200" y2="360"/>
+    <line x1="300" y1="0" x2="300" y2="360"/>
+    <line x1="400" y1="0" x2="400" y2="360"/>
+    <line x1="500" y1="0" x2="500" y2="360"/>
+  </g>
+
+  <!-- Ambient Glow Circles -->
+  <circle cx="500" cy="80" r="90" fill="#8B5CF6" opacity="0.18" filter="url(#previewGlow)"/>
+  <circle cx="120" cy="280" r="110" fill="#06B6D4" opacity="0.15" filter="url(#previewGlow)"/>
+
+  <!-- Top Mockup Window Header -->
+  <rect x="20" y="20" width="560" height="36" rx="8" fill="#131A2E" stroke="rgba(139, 92, 246, 0.25)" stroke-width="1"/>
+  <circle cx="42" cy="38" r="5" fill="#EF4444"/>
+  <circle cx="58" cy="38" r="5" fill="#F59E0B"/>
+  <circle cx="74" cy="38" r="5" fill="#10B981"/>
+  
+  <rect x="140" y="26" width="320" height="22" rx="11" fill="#0A0D18" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="300" y="41" fill="#A1A1AA" font-family="'Segoe UI', sans-serif" font-size="9" text-anchor="middle">https://aryaveer-ops.github.io/PERSONAL-PORTFOLIO-/</text>
+
+  <!-- Left: Hero Preview Mockup -->
+  <g transform="translate(35, 75)">
+    <!-- Small Badge Mockup -->
+    <rect width="180" height="20" rx="10" fill="rgba(139, 92, 246, 0.15)" stroke="rgba(139, 92, 246, 0.35)" stroke-width="1"/>
+    <circle cx="12" cy="10" r="3" fill="#06B6D4"/>
+    <text x="24" y="14" fill="#C4B5FD" font-family="sans-serif" font-size="8.5" font-weight="600">B.Tech CSE | DS &amp; AI</text>
+
+    <!-- Main Heading -->
+    <text x="0" y="48" fill="#FFFFFF" font-family="'Segoe UI', sans-serif" font-size="22" font-weight="800">Hi, I'm Aryaveer Shahi</text>
+    
+    <!-- Gradient dynamic title -->
+    <text x="0" y="72" fill="url(#gradPurpleCyan)" font-family="monospace" font-size="13" font-weight="700">&gt; Aspiring Software Engineer |</text>
+
+    <!-- Paragraph preview lines -->
+    <rect x="0" y="92" width="260" height="6" rx="3" fill="#374151" opacity="0.6"/>
+    <rect x="0" y="104" width="220" height="6" rx="3" fill="#374151" opacity="0.6"/>
+    <rect x="0" y="116" width="180" height="6" rx="3" fill="#374151" opacity="0.4"/>
+
+    <!-- Dual Buttons Mockup -->
+    <rect x="0" y="140" width="105" height="28" rx="6" fill="url(#gradPurpleCyan)"/>
+    <text x="52" y="158" fill="#FFFFFF" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Explore Work</text>
+
+    <rect x="115" y="140" width="115" height="28" rx="6" fill="rgba(255, 255, 255, 0.05)" stroke="rgba(139, 92, 246, 0.3)" stroke-width="1"/>
+    <text x="172" y="158" fill="#CBD5E1" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Resume.pdf</text>
+
+    <!-- Stats & Tech Stack Badges -->
+    <g transform="translate(0, 190)">
+      <rect x="0" y="0" width="68" height="22" rx="4" fill="#131A2E" stroke="#8B5CF6" stroke-width="0.8"/>
+      <text x="34" y="15" fill="#C4B5FD" font-family="monospace" font-size="9" text-anchor="middle">HTML5</text>
+
+      <rect x="76" y="0" width="64" height="22" rx="4" fill="#131A2E" stroke="#06B6D4" stroke-width="0.8"/>
+      <text x="108" y="15" fill="#67E8F9" font-family="monospace" font-size="9" text-anchor="middle">CSS3</text>
+
+      <rect x="148" y="0" width="68" height="22" rx="4" fill="#131A2E" stroke="#F59E0B" stroke-width="0.8"/>
+      <text x="182" y="15" fill="#FDE68A" font-family="monospace" font-size="9" text-anchor="middle">JS (ES6)</text>
+    </g>
+  </g>
+
+  <!-- Right: Developer Card & Floating Badges Mockup -->
+  <g transform="translate(355, 75)">
+    <!-- Glass card container -->
+    <rect width="210" height="240" rx="18" fill="#11172A" stroke="url(#gradPurpleCyan)" stroke-width="1.5" opacity="0.95"/>
+    
+    <!-- Inner profile avatar placeholder -->
+    <circle cx="105" cy="85" r="48" fill="#18223C" stroke="#8B5CF6" stroke-width="2"/>
+    <path d="M72,125 C72,105 87,95 105,95 C123,95 138,105 138,125 Z" fill="#243054"/>
+    <circle cx="105" cy="72" r="22" fill="#32416E"/>
+
+    <!-- Live indicator badge -->
+    <rect x="45" y="145" width="120" height="24" rx="12" fill="#080B14" stroke="#10B981" stroke-width="1"/>
+    <circle cx="62" cy="157" r="4" fill="#10B981"/>
+    <text x="110" y="161" fill="#34D399" font-family="sans-serif" font-size="9" font-weight="bold" text-anchor="middle">ACTIVE PORTFOLIO</text>
+
+    <!-- Mini stats inside mockup -->
+    <rect x="25" y="182" width="160" height="42" rx="8" fill="#0B0F1C" stroke="rgba(139, 92, 246, 0.2)" stroke-width="1"/>
+    <text x="105" y="200" fill="#A1A1AA" font-family="sans-serif" font-size="8.5" text-anchor="middle">DARK UI • GLASSMORPHISM</text>
+    <text x="105" y="214" fill="#06B6D4" font-family="monospace" font-size="9" font-weight="bold" text-anchor="middle">100% RESPONSIVE</text>
+
+    <!-- Mini floating badges outside card -->
+    <g transform="translate(-15, 20)">
+      <rect width="62" height="22" rx="11" fill="#0D1222" stroke="#FB923C" stroke-width="1"/>
+      <text x="31" y="15" fill="#FB923C" font-family="sans-serif" font-size="8" font-weight="bold" text-anchor="middle">HTML5</text>
+    </g>
+    <g transform="translate(160, 45)">
+      <rect width="55" height="22" rx="11" fill="#0D1222" stroke="#60A5FA" stroke-width="1"/>
+      <text x="27" y="15" fill="#60A5FA" font-family="sans-serif" font-size="8" font-weight="bold" text-anchor="middle">CSS3</text>
+    </g>
+    <g transform="translate(150, 160)">
+      <rect width="65" height="22" rx="11" fill="#0D1222" stroke="#FBBF24" stroke-width="1"/>
+      <text x="32" y="15" fill="#FBBF24" font-family="sans-serif" font-size="8" font-weight="bold" text-anchor="middle">Vanilla JS</text>
+    </g>
+  </g>
+</svg>
